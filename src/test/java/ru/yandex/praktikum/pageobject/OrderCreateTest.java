@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.pageObject;
+package ru.yandex.praktikum.pageobject;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -8,12 +8,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import ru.yandex.praktikum.pageobject.constants.OrderButtonCreate;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static ru.yandex.praktikum.pageObject.constants.OrderButtonCreate.DOWN_BUTTON;
-import static ru.yandex.praktikum.pageObject.constants.OrderButtonCreate.UP_BUTTON;
-import static ru.yandex.praktikum.pageObject.constants.CollorsScooter.*;
+import static ru.yandex.praktikum.pageobject.constants.OrderButtonCreate.DOWN_BUTTON;
+import static ru.yandex.praktikum.pageobject.constants.OrderButtonCreate.UP_BUTTON;
+import static ru.yandex.praktikum.pageobject.constants.CollorsScooter.*;
 
 @RunWith(Parameterized.class)
 public class OrderCreateTest {
@@ -29,9 +30,9 @@ public class OrderCreateTest {
     private final Enum colour;
     private final String comment;
     private final String expectedHeader = "Заказ оформлен";
-    private final Enum button;
+    private final OrderButtonCreate button;
 
-    public OrderCreateTest(Enum button, String name, String surname, String address, int stateMetroNumber, String telephoneNumber,
+    public OrderCreateTest(OrderButtonCreate button, String name, String surname, String address, int stateMetroNumber, String telephoneNumber,
                            String date, String duration, Enum colour, String comment) {
         this.button = button;
         this.name = name;

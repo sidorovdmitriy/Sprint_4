@@ -1,4 +1,4 @@
-package ru.yandex.praktikum.pageObject;
+package ru.yandex.praktikum.pageobject;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
@@ -9,10 +9,9 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.yandex.praktikum.pageObject.constants.BasePageConstants;
 
 import static org.junit.Assert.assertEquals;
-import static ru.yandex.praktikum.pageObject.constants.BasePageConstants.*;
+import static ru.yandex.praktikum.pageobject.constants.BasePageConstants.*;
 
 @RunWith(Parameterized.class)
 public class BasePageTest {

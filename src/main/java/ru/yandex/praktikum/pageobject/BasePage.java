@@ -1,15 +1,16 @@
-package ru.yandex.praktikum.pageObject;
+package ru.yandex.praktikum.pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.praktikum.pageobject.constants.OrderButtonCreate;
 
 import java.time.Duration;
 
-import static ru.yandex.praktikum.pageObject.constants.OrderButtonCreate.DOWN_BUTTON;
-import static ru.yandex.praktikum.pageObject.constants.OrderButtonCreate.UP_BUTTON;
+import static ru.yandex.praktikum.pageobject.constants.OrderButtonCreate.DOWN_BUTTON;
+import static ru.yandex.praktikum.pageobject.constants.OrderButtonCreate.UP_BUTTON;
 
 public class BasePage {
     WebDriver driver;
@@ -59,7 +60,7 @@ public class BasePage {
         return this;
     }
 
-    public void clickCreateOrderButton(Enum button) {
+    public void clickCreateOrderButton(OrderButtonCreate button) {
         if (button.equals(UP_BUTTON)) {
             clickUpOrderButton();
         } else if (button.equals(DOWN_BUTTON)) {
